@@ -3,9 +3,46 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bootstraper", "Bootstraper", "{896857FE-6D2B-43CB-8C04-96E97CED8DAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{C178F9F7-3507-4A47-BFC2-53EB3A57FA48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{79359715-190E-4978-B9FB-06738EF95D41}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "Boostraper\WebApi\WebApi.csproj", "{34B30954-A63F-4495-9312-3B02A83E1CB4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{FAB109E7-C0EC-41AB-9E28-0E7F06201021}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ordering", "Ordering", "{1B95ACAB-431E-41FF-BE10-7A97CA3E0B26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{31B4A51F-3161-4719-8272-77946D309242}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "Modules\Catalog\ClassLibrary1\ClassLibrary1.csproj", "{9820B5C9-F117-4F4E-B833-709306D80190}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34B30954-A63F-4495-9312-3B02A83E1CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34B30954-A63F-4495-9312-3B02A83E1CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34B30954-A63F-4495-9312-3B02A83E1CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34B30954-A63F-4495-9312-3B02A83E1CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9820B5C9-F117-4F4E-B833-709306D80190}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9820B5C9-F117-4F4E-B833-709306D80190}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9820B5C9-F117-4F4E-B833-709306D80190}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9820B5C9-F117-4F4E-B833-709306D80190}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34B30954-A63F-4495-9312-3B02A83E1CB4} = {896857FE-6D2B-43CB-8C04-96E97CED8DAA}
+		{FAB109E7-C0EC-41AB-9E28-0E7F06201021} = {C178F9F7-3507-4A47-BFC2-53EB3A57FA48}
+		{1B95ACAB-431E-41FF-BE10-7A97CA3E0B26} = {C178F9F7-3507-4A47-BFC2-53EB3A57FA48}
+		{31B4A51F-3161-4719-8272-77946D309242} = {C178F9F7-3507-4A47-BFC2-53EB3A57FA48}
+		{9820B5C9-F117-4F4E-B833-709306D80190} = {FAB109E7-C0EC-41AB-9E28-0E7F06201021}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {642A7AE7-0FB4-4393-95FF-48FFE361735A}
