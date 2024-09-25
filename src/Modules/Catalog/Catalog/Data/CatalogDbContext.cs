@@ -14,8 +14,9 @@ namespace Catalog.Data
 		public DbSet<Product> Products { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
 		{
-			base.OnModelCreating(modelBuilder);
+			modelBuilder.HasDefaultSchema("catalog");
 			modelBuilder.ApplyConfiguration<Product>(new ProductConfiguration());
+			base.OnModelCreating(modelBuilder);
 		}
 	}
 }

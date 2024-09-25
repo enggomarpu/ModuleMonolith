@@ -2,7 +2,7 @@
 var builder = WebApplication.CreateBuilder(args);
 
 //Services
-builder.Services.AddCatalogModule();
+builder.Services.AddCatalogModule(builder.Configuration);
 builder.Services.AddBasketModule();
 builder.Services.AddOrderingModule();
 
