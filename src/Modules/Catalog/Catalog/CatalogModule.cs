@@ -1,10 +1,12 @@
 ﻿using Catalog.Data;
+using Catalog.Data.Seed;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using Shared.Data;
+using Shared.Data.Seed;
 
 namespace Catalog
 {
@@ -14,6 +16,8 @@ namespace Catalog
 		{
 			var connectionString = configuration.GetConnectionString("PostgresDatabase");
 			services.AddDbContext<CatalogDbContext>(options => options.UseNpgsql(connectionString));
+
+			services.AddScoped<IDataSeeder, CatalogDataSeeder>();
 
 			return services;
 		}

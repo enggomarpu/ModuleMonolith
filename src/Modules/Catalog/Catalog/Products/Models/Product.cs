@@ -14,5 +14,40 @@ namespace Catalog.Products.Models
 		public string Description { get; private set; } 
 		public string ImageFile { get; private set; } 
 		public decimal Price { get; private set; }
-	}
+
+
+        public static Product Create(Guid id, string name, List<string> category, string description, string imageFile, decimal price)
+        {
+
+
+            //ArgumentException.ThrowIfNullOrEmpty(name);
+            //ArgumentOutOfRangeException.ThrowIfNegativeOrZero(price);
+
+            if (string.IsNullOrEmpty(name)) throw new ArgumentNullException(nameof(name));
+            if (price <= 0) throw new ArgumentOutOfRangeException(nameof(price));
+
+
+            var product = new Product
+            {
+                Id = id,
+                Name = name,
+                Category = category,
+                Description = description,
+                ImageFile = imageFile,
+                Price = price
+            };
+
+            //product.AddDomainEvent(new ProductCreatedEvent(product));
+
+            return product;
+        }
+
+
+
+
+
+
+    }
+
+
 }
