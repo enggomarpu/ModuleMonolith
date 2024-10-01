@@ -1,4 +1,5 @@
-﻿using Shared.DDD;
+﻿using Catalog.Products.Events;
+using Shared.DDD;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Catalog.Products.Models
 {
-	public class Product : Entity<Guid>
+	public class Product : Aggregate<Guid>
 	{
 		public string Name { get; private set; } 
 		public List<string> Category { get; private set; } = new();
@@ -37,7 +38,7 @@ namespace Catalog.Products.Models
                 Price = price
             };
 
-            //product.AddDomainEvent(new ProductCreatedEvent(product));
+            product.AddDomainEvent(new ProductCreatedEvent(product));
 
             return product;
         }
