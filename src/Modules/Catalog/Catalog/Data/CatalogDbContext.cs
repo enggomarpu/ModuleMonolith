@@ -1,12 +1,13 @@
 ﻿using Catalog.Data.Configurations;
 using Catalog.Products.Models;
 using Microsoft.EntityFrameworkCore;
+using Shared.Repositories;
 
 namespace Catalog.Data
 {
-	public class CatalogDbContext : DbContext
+	public class CatalogDbContext : DbContextUnitOfWork<CatalogDbContext>
 	{
-        public CatalogDbContext(DbContextOptions options) : base(options)
+        public CatalogDbContext(DbContextOptions<CatalogDbContext> options) : base(options)
         {
             
         }

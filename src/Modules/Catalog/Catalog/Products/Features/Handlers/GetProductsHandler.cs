@@ -14,11 +14,11 @@ namespace Catalog.Products.Features.Handlers
 {
 	public class GetProductsHandler : IRequestHandler<GetProductsQuery, IEnumerable<ProductResponseDto>>
 	{
-		private readonly IRepository<Product, Guid> _productRepo;
+		private readonly IRepository2<Product, Guid> _productRepo;
 		private readonly IMapper _mapper;
 
 		public GetProductsHandler(
-			IRepository<Product, Guid> productRepo,
+			IRepository2<Product, Guid> productRepo,
 			IMapper mapper
 		)
         {
